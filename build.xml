@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<project name="project-name" default="jar" basedir=".">
+<project name="project-test" default="jar" basedir=".">
 
+	<property name="version" value="1.0" />
+	<buildnumber file="build.num" />
 	<property name="source.dir" value="src" />
 	<property name="java.dir" value="${source.dir}/java" />
 	<property name="lib.dir" value="lib" />
 	<property name="res.dir" value="resources" />
 	<property name="jar.dir" value="output" />
 	<property name="class.dir" value="${jar.dir}/classes" />
-	<property name="jar.file" value="${jar.dir}/${ant.project.name}.jar" />
+	<property name="jar.file" value="${jar.dir}/${ant.project.name}-${version}.${build.number}.jar" />
 	<property name="main-class" value="com.test.Main" />
 
 	<path id="libraries.path">
@@ -61,7 +63,7 @@
 	</target>
 
 	<target name="run" depends="jar">
-		<java jar="${jar.dir}/${ant.project.name}.jar" fork="true" />
+		<java jar="${jar.dir}/${jar.file}.jar" fork="true" />
 	</target>
 
 </project>
