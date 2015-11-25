@@ -144,7 +144,7 @@ When changing many files for the same reason, check them in in a single commit, 
 
 <!-- -->
 
--   When you remove or move away all files in a package, remove that directory. Similarly, do not commit empty directories to the repository until you are also committing contents to them. check\_all will identify and fail for both of these situations.
+-   When you remove or move away all files in a package, remove that directory. Similarly, do not commit empty directories to the repository until you are also committing contents to them.
 
 Tests
 -----
